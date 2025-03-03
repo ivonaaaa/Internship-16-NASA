@@ -1,7 +1,8 @@
+import React from "react";
 import AppRouter from "./routes/Router";
 import "./App.css";
 
-const App = () => {
+const App: React.FC = () => {
   return <AppRouter />;
 };
 
