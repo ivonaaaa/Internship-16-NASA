@@ -7,7 +7,10 @@ const Home: React.FC = () => {
   return (
     <div>
       <Headline />
-      <img src="src\assets\space-bg.jpg" className="bg-image"></img>
+      <img src="src/assets/space-bg.jpg" className="bg-image"></img>
+      <img src="src/assets/planet-1.png" className="planet-1"></img>
+      <img src="src/assets/planet-2.png" className="planet-2"></img>
+      <img src="src/assets/astronaut.png" className="astronaut"></img>
 
       <div className="home-content">
         <div className="intro">
@@ -46,7 +49,7 @@ const Home: React.FC = () => {
             title="Earth Imagery"
             link={routes.EI}
             description="Curious about how Earth looks from space? See real-time images of our beautiful planet captured from above!"
-            style={{ backgroundColor: "#cb9ffe" }}
+            style={{ backgroundColor: "#b6e3ff" }}
           />
         </div>
       </div>
