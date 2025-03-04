@@ -7,7 +7,7 @@ export const routes: Routes = {
   APOD: "/astronomy-picture-of-the-day",
   MRP: "/mars-rover-photos",
   NEO: "near-earth-objects",
-  EI: "earth-imagery",
-  DETAILS: "details/:id", //valjda ce po ID-ju bit
+  EI: "/earth-imagery",
+  DETAILS: "/details/:id", //valjda ce po ID-ju bit
   NOT_FOUND: "*",
 };

@@ -3,7 +3,7 @@ import Card from "../components/HomePage/PageCard";
 import Headline from "../components/HomePage/Headline";
 import { routes } from "../constants/routes";
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <div>
       <Headline />
@@ -57,4 +57,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default HomePage;
