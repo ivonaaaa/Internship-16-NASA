@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CardProps } from "../../types/CardProps";
+import { CardProps } from "../../types/HomeCardProps";
 
 const Card: React.FC<CardProps> = ({ title, link, description, style }) => {
   return (

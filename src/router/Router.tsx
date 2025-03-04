@@ -5,8 +5,8 @@ import HomePage from "../pages/HomePage";
 import APODPage from "../pages/AstronomyPictureOfTheDayPage";
 import MRPPage from "../pages/MarsRoverPhotosPage";
 import NEOPage from "../pages/NearEarthObjectsPage";
-/*
 import EIPage from "../pages/EarthImageryPage";
+/*
 import DetailsPage from "../pages/DetailsPage";
 import NotFoundPage from "../pages/404Page";
 */
@@ -20,6 +20,7 @@ const AppRouter = () => {
           <Route path={routes.APOD} element={<APODPage />} />
           <Route path={routes.MRP} element={<MRPPage />} />
           <Route path={routes.NEO} element={<NEOPage />} />
+          <Route path={routes.EI} element={<EIPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

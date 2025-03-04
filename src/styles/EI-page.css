@@ -1,0 +1,25 @@
+.map-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.image-card {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+}
+
+.image-details {
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
