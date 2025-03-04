@@ -3,7 +3,7 @@ import MapComponent from "../components/EarthImageryPage/Map";
 import ImageCard from "../components/EarthImageryPage/ImageCard";
 import useEarthImage from "../hooks/useEI";
 import withFavorites from "../hoc/WithFavourites";
-//import "../styles/EI-page.css"; dodat cz styling
+import "../styles/EI-page.css";
 
 const MapPage: React.FC = ({ favorites, onAddToFavorites }: any) => {
   const [selectedLocation, setSelectedLocation] = useState<{

@@ -20,7 +20,7 @@ const useEarthImage = ({ latitude, longitude }: UseEarthImageParams) => {
       const fetchImage = async () => {
         setLoading(true);
         try {
-          const url = `${BASE_URL}?lon=${longitude}&lat=${latitude}&api_key=${API_KEY}`;
+          const url = `${BASE_URL}?lon=${longitude}&lat=${latitude}&dim=0.5&api_key=${API_KEY}`;
           const response = await axios.get(url);
           const { url: imageUrl, date } = response.data;
           setImage({
