@@ -5,7 +5,7 @@ import { routes } from "../constants/routes";
 
 const HomePage: React.FC = () => {
   return (
-    <div>
+    <div className="home-page">
       <Headline />
       <img src="src/assets/space-bg.jpg" className="bg-image"></img>
       <img src="src/assets/planet-1.png" className="planet-1"></img>
