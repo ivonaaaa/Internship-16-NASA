@@ -1,0 +1,54 @@
+.neo-container {
+  padding: 20px;
+}
+
+.graph-container {
+  justify-self: center;
+}
+
+.custom-tooltip {
+  background-color: #9d80a644;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-tooltip h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.custom-tooltip p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.secondary-headline {
+  margin: 50px 0 0 0;
+  font-size: 1.5rem;
+}
+
+.neo-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.neo-card {
+  padding: 5px 0px 5px 15px;
+  background-color: #9d80a644;
+  border-radius: 10px;
+  display: flex;
+  margin: 10px;
+}
+
+.neo-card h3 {
+  margin-top: 15px;
+}
+
+.starting-point {
+  display: flex;
+  gap: 40px;
+  margin: 0 10px;
+  position: absolute;
+  left: 350px;
+}

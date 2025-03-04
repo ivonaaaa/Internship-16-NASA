@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../components/HomePage/PageCard";
+import Card from "../components/HomePage/HPCard";
 import Headline from "../components/HomePage/Headline";
 import { routes } from "../constants/routes";
 
