@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "../components/Layout";
 import Home from "../pages/HomePage";
-/*
 import APODPage from "../pages/AstronomyPictureOfTheDayPage";
+/*
 import MRPPage from "../pages/MarsRoverPhotosPage";
 import NEOPage from "../pages/NearEarthObjectsPage";
 import EIPage from "../pages/EarthImageryPage";
@@ -16,6 +16,7 @@ const AppRouter = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/astronomy-picture-of-the-day" element={<APODPage />} />
         </Routes>
       </Layout>
     </Router>
@@ -23,12 +24,3 @@ const AppRouter = () => {
 };
 
 export default AppRouter;
-
-/*
-<Route path={routes.APOD} element={<APODPage />} />
-<Route path={routes.MRP} element={<MRPPage />} />
-<Route path={routes.NEO} element={<NEOPage />} />
-<Route path={routes.EI} element={<EIPage />} />
-<Route path={routes.DETAILS} element={<DetailsPage />} />
-<Route path={routes.NOT_FOUND} element={<NotFoundPage />} />
-*/
