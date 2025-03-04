@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { fetchAPOD } from "../services/APODService";
 import { APODData } from "../types/APODData";
 import APODCard from "../components/AstronomyPictureOfTheDayPage/APODCard";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, Button } from "@mui/material";
 import { getLast20Days } from "../utils/getLast20Days";
+import "../styles/APOD-page.css";
 
 const APOD: React.FC = () => {
   const [filteredImages, setFilteredImages] = useState<APODData[]>([]);
@@ -75,10 +76,10 @@ const APOD: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="apod-container">
       <h1>Astronomy Picture of the Day</h1>
 
-      <div>
+      <div className="filter-container">
         <label>Start Date: </label>
         <input
           type="date"
@@ -91,12 +92,21 @@ const APOD: React.FC = () => {
           value={endDate}
           onChange={(e) => setEndDate(e.target.value)}
         />
-        <button onClick={handleFilter}>Filter</button>
+        <Button
+          variant="contained"
+          onClick={handleFilter}
+          disabled={loading}
+          sx={{
+            borderRadius: "25px",
+          }}
+        >
+          Filter
+        </Button>
       </div>
 
-      <div>
+      <div className="gallery">
         {loading ? (
-          <div>
+          <div className="loading-container">
             <CircularProgress size={30} />
           </div>
         ) : (
@@ -106,7 +116,18 @@ const APOD: React.FC = () => {
         )}
       </div>
 
-      {loading ? null : <button onClick={loadMore}>Load More</button>}
+      {loading ? null : (
+        <Button
+          variant="contained"
+          sx={{
+            borderRadius: "20px",
+            marginBottom: "50px",
+          }}
+          onClick={loadMore}
+        >
+          Load More
+        </Button>
+      )}
     </div>
   );
 };
