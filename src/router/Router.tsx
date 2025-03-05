@@ -9,7 +9,7 @@ import EIPage from "../pages/EarthImageryPage";
 import APODDetail from "../pages/APODDetailPage";
 import MarsRoverDetail from "../pages/MRPDetailPage";
 import NEODetail from "../pages/NEODetailPage";
-//import NotFoundPage from "../pages/404Page";
+import NotFound from "../pages/404Page";
 import ErrorBoundary from "../components/ErrorBoundary";
 
 const AppRouter = () => {
@@ -29,6 +29,7 @@ const AppRouter = () => {
               element={<MarsRoverDetail />}
             />
             <Route path="/details/neo/:id" element={<NEODetail />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </ErrorBoundary>
