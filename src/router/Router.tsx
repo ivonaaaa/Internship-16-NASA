@@ -8,7 +8,7 @@ import NEOPage from "../pages/NearEarthObjectsPage";
 import EIPage from "../pages/EarthImageryPage";
 import APODDetail from "../pages/APODDetailPage";
 import MarsRoverDetail from "../pages/MRPDetailPage";
-//import NEODetail from "../pages/NEODetailPage";
+import NEODetail from "../pages/NEODetailPage";
 //import NotFoundPage from "../pages/404Page";
 
 const AppRouter = () => {
@@ -26,7 +26,7 @@ const AppRouter = () => {
             path="/details/mars/:rover/:id"
             element={<MarsRoverDetail />}
           />
-          {/*<Route path="/neo/:id" element={<NEODetail />} />*/}
+          <Route path="/details/neo/:id" element={<NEODetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
