@@ -27,10 +27,10 @@ const APODDetail = () => {
   const apod = data[0];
 
   return (
-    <div>
-      <h1>{apod?.title}</h1>
-      <img src={apod?.url} alt={apod?.title} />
-      <p>{apod?.explanation}</p>
+    <div className="detail-container">
+      <h1 className="detail-title">{apod?.title}</h1>
+      <img src={apod?.url} alt={apod?.title} className="detail-image" />
+      <p className="detail-description">{apod?.explanation}</p>
       <p>
         <strong>Date:</strong> {apod?.date}
       </p>

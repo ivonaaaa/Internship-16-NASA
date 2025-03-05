@@ -22,39 +22,45 @@ const MRPDetailsPage = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div>
-      <h1>Photo from {photo?.rover.name ?? rover}</h1>
+    <div className="detail-container">
+      <h1 className="detail-title">Photo from {photo?.rover.name ?? rover}</h1>
 
       {photo?.img_src ? (
-        <img src={photo.img_src} alt={`Mars Rover ${photo.rover.name}`} />
+        <img
+          src={photo.img_src}
+          alt={`Mars Rover ${photo.rover.name}`}
+          className="detail-image"
+        />
       ) : (
         <p>No photo found.</p>
       )}
 
-      <p>
-        <strong>Date Taken:</strong> {photo?.earth_date ?? "N/A"}
-      </p>
-      <p>
-        <strong>Camera:</strong> {photo?.camera.full_name ?? "N/A"} (
-        {photo?.camera.name ?? "N/A"})
-      </p>
-      <p>
-        <strong>Rover Info:</strong>
-      </p>
-      <ul>
-        <li>
-          <strong>Name:</strong> {photo?.rover.name ?? rover}
-        </li>
-        <li>
-          <strong>Launch Date:</strong> {photo?.rover.launch_date ?? "N/A"}
-        </li>
-        <li>
-          <strong>Landing Date:</strong> {photo?.rover.landing_date ?? "N/A"}
-        </li>
-        <li>
-          <strong>Status:</strong> {photo?.rover.status ?? "N/A"}
-        </li>
-      </ul>
+      <div className="detail-description">
+        <p>
+          <strong>Date Taken:</strong> {photo?.earth_date ?? "N/A"}
+        </p>
+        <p>
+          <strong>Camera:</strong> {photo?.camera.full_name ?? "N/A"} (
+          {photo?.camera.name ?? "N/A"})
+        </p>
+        <p>
+          <strong>Rover Info:</strong>
+        </p>
+        <ul>
+          <li>
+            <strong>Name:</strong> {photo?.rover.name ?? rover}
+          </li>
+          <li>
+            <strong>Launch Date:</strong> {photo?.rover.launch_date ?? "N/A"}
+          </li>
+          <li>
+            <strong>Landing Date:</strong> {photo?.rover.landing_date ?? "N/A"}
+          </li>
+          <li>
+            <strong>Status:</strong> {photo?.rover.status ?? "N/A"}
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -21,22 +21,24 @@ const NEODetail = () => {
   if (!neo) return <div>No NEO data found.</div>;
 
   return (
-    <div>
-      <h1>{neo.name}</h1>
-      <p>
-        <strong>Close Approach Date:</strong>{" "}
-        {neo.close_approach_data[0]?.close_approach_date || "Unknown"}
-      </p>
-      <p>
-        <strong>Miss Distance:</strong>{" "}
-        {neo.close_approach_data[0]?.miss_distance.kilometers || "Unknown"} km
-      </p>
-      <p>
-        <strong>Velocity:</strong>{" "}
-        {neo.close_approach_data[0]?.relative_velocity.kilometers_per_hour ||
-          "Unknown"}{" "}
-        km/h
-      </p>
+    <div className="detail-container">
+      <h1 className="detail-title">{neo.name}</h1>
+      <div className="neo-info">
+        <p>
+          <strong>Close Approach Date:</strong>{" "}
+          {neo.close_approach_data[0]?.close_approach_date || "Unknown"}
+        </p>
+        <p>
+          <strong>Miss Distance:</strong>{" "}
+          {neo.close_approach_data[0]?.miss_distance.kilometers || "Unknown"} km
+        </p>
+        <p>
+          <strong>Velocity:</strong>{" "}
+          {neo.close_approach_data[0]?.relative_velocity.kilometers_per_hour ||
+            "Unknown"}{" "}
+          km/h
+        </p>
+      </div>
     </div>
   );
 };

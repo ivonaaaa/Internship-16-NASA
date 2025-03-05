@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { forwardRef } from "react";
 import { APODData } from "../../types/APODData";
 import "../../styles/APOD-page.css";
+import "../../styles/details-page.css";
 
 interface APODCardProps {
   data: APODData;
@@ -9,7 +10,7 @@ interface APODCardProps {
 
 const APODCard = forwardRef<HTMLDivElement, APODCardProps>(({ data }, ref) => {
   return (
-    <Link to={`/details/apod/${data.date}`} className="apod-card-link">
+    <Link to={`/details/apod/${data.date}`} className="link">
       <div ref={ref} className="apod-card">
         <img src={data.url} alt={data.title} />
         <div className="apod-card-content">

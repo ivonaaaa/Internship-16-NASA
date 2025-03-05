@@ -11,7 +11,7 @@ const PhotoCard: React.FC<PhotoCardProps> = ({ photo }) => {
   return (
     <Link
       to={`/details/mars/${photo.rover.name.toLowerCase()}/${photo.id}`}
-      className="mars-card-link"
+      className="link"
     >
       <div className="mars-card">
         <img src={photo.img_src} alt={photo.rover.name} />
