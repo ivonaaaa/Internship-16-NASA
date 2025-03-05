@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import useMarsPhotos from "../hooks/useMRP";
-import { MarsPhoto } from "../types/MRPData";
+import useMarsPhotos from "../../hooks/useMRP";
+import { MarsPhoto } from "../../types/MRPData";
 
 const MRPDetailsPage = () => {
   const { id, rover } = useParams<{ id: string; rover: string }>();

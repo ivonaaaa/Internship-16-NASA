@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { forwardRef } from "react";
 import { APODData } from "../../types/APODData";
-import "../../styles/APOD-page.css";
-import "../../styles/details-page.css";
+import "../../styles/pages-styles/APOD-page.css";
+import "../../styles/pages-styles/details-page.css";
 
 interface APODCardProps {
   data: APODData;

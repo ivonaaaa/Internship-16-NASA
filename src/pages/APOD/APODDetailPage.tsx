@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import useAPOD from "../hooks/useAPOD";
+import useAPOD from "../../hooks/useAPOD";
 
 const APODDetail = () => {
   const { date } = useParams<{ date: string }>();

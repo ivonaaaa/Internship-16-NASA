@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import { Switch } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "../contexts/theme-provider/ThemeContext";
-import "../styles/navigation.css";
+import "../styles/other/navigation.css";
 
 const Navigation = () => {
   const location = useLocation();

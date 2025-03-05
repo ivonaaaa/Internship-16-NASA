@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/MRP-page.css";
+import "../../styles/pages-styles/MRP-page.css";
 
 const rovers = ["Curiosity", "Opportunity", "Spirit"];
 const cameras = ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "NAVCAM"];

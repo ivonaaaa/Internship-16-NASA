@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import useNEO from "../hooks/useNEO";
-import { NEO } from "../types/NEOData";
+import useNEO from "../../hooks/useNEO";
+import { NEO } from "../../types/NEOData";
 
 const NEODetail = () => {
   const { id } = useParams<{ id: string }>();

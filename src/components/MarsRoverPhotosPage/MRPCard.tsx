@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { MarsPhoto } from "../../types/MRPData";
-import "../../styles/MRP-page.css";
+import "../../styles/pages-styles/MRP-page.css";
 
 interface PhotoCardProps {
   photo: MarsPhoto;

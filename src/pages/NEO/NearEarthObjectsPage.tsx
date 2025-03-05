@@ -1,6 +1,6 @@
 import React from "react";
-import useNEO from "../hooks/useNEO";
-import NEOCard from "../components/NearEarthObjectsPage/NEOCard";
+import useNEO from "../../hooks/useNEO";
+import NEOCard from "../../components/NearEarthObjectsPage/NEOCard";
 import { CircularProgress } from "@mui/material";
 import {
   ResponsiveContainer,
@@ -12,7 +12,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import "../styles/NEO-page.css";
+import "../../styles/pages-styles/NEO-page.css";
 
 const NEOPage: React.FC = () => {
   const { neoData, loading, error } = useNEO();

@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { routes } from "../constants/routes";
 import { Layout } from "../pages/Layout";
-import HomePage from "../pages/HomePage";
-import APODPage from "../pages/AstronomyPictureOfTheDayPage";
-import MRPPage from "../pages/MarsRoverPhotosPage";
-import NEOPage from "../pages/NearEarthObjectsPage";
-import EIPage from "../pages/EarthImageryPage";
-import APODDetail from "../pages/APODDetailPage";
-import MarsRoverDetail from "../pages/MRPDetailPage";
-import NEODetail from "../pages/NEODetailPage";
+import HomePage from "../pages/HomePage/HomePage";
+import APODPage from "../pages/APOD/AstronomyPictureOfTheDayPage";
+import MRPPage from "../pages/MRP/MarsRoverPhotosPage";
+import NEOPage from "../pages/NEO/NearEarthObjectsPage";
+import EIPage from "../pages/EI/EarthImageryPage";
+import APODDetail from "../pages/APOD/APODDetailPage";
+import MarsRoverDetail from "../pages/MRP/MRPDetailPage";
+import NEODetail from "../pages/NEO/NEODetailPage";
 import NotFound from "../pages/404Page";
 import ErrorBoundary from "../components/ErrorBoundary";
 

@@ -1,16 +1,17 @@
 import React from "react";
-import Card from "../components/HomePage/HPCard";
-import Headline from "../components/HomePage/Headline";
-import { routes } from "../constants/routes";
+import Card from "../../components/HomePage/HPCard";
+import Headline from "../../components/HomePage/Headline";
+import { routes } from "../../constants/routes";
+import "../../styles/pages-styles/home-page.css";
 
 const HomePage: React.FC = () => {
   return (
     <div className="home-page">
       <Headline />
-      <img src="src/assets/space-bg.jpg" className="bg-image"></img>
-      <img src="src/assets/planet-1.png" className="planet-1"></img>
-      <img src="src/assets/planet-2.png" className="planet-2"></img>
-      <img src="src/assets/astronaut.png" className="astronaut"></img>
+      <img src="src/assets/images/space-bg.jpg" className="bg-image"></img>
+      <img src="src/assets/images/planet-1.png" className="planet-1"></img>
+      <img src="src/assets/images/planet-2.png" className="planet-2"></img>
+      <img src="src/assets/images/astronaut.png" className="astronaut"></img>
 
       <div className="home-content">
         <div className="intro">

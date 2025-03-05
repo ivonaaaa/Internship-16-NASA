@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import MapComponent from "../components/EarthImageryPage/Map";
-import ImageCard from "../components/EarthImageryPage/ImageCard";
-import useEarthImage from "../hooks/useEI";
-import withFavorites from "../hoc/WithFavourites";
-import withImageZoom from "../hoc/WithImageZoom";
+import MapComponent from "../../components/EarthImageryPage/Map";
+import ImageCard from "../../components/EarthImageryPage/ImageCard";
+import useEarthImage from "../../hooks/useEI";
+import withFavorites from "../../hoc/WithFavourites";
+import withImageZoom from "../../hoc/WithImageZoom";
 import { CircularProgress, Button } from "@mui/material";
-import "../styles/EI-page.css";
+import "../../styles/pages-styles/EI-page.css";
 
 const MapPage: React.FC = ({ favorites, onAddToFavorites }: any) => {
   const [selectedLocation, setSelectedLocation] = useState<{
