@@ -4,6 +4,9 @@
   left: 0;
   min-width: 100%;
   min-height: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  z-index: 1000;
 }
 
 .page-content {

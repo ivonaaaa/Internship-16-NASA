@@ -22,6 +22,11 @@
   margin-bottom: 0;
 }
 
+.headline-text {
+  font-size: 1em;
+  color: inherit;
+}
+
 .intro {
   flex: 1;
   min-width: 450px;
@@ -36,6 +41,7 @@
 .intro p {
   font-size: 1.1rem;
   line-height: 1.6;
+  color: inherit;
 }
 
 .cards-container {

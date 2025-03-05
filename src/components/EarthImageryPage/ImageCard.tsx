@@ -1,6 +1,7 @@
 import React from "react";
 import { ImageCardPropsWithClick } from "../../types/ImageCardProps";
 import "../../styles/withImageZoom.css";
+import "../../styles/EI-page.css";
 
 const ImageCard: React.FC<ImageCardPropsWithClick> = ({
   imageUrl,

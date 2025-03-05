@@ -13,8 +13,8 @@ const MRPPage: React.FC = () => {
 
   return (
     <div className="mars-container">
+      <img src="src/assets/rocket.png" className="rocket-image"></img>
       <h1>Mars Rover Photos</h1>
-
       <Filters setRover={setRover} setCamera={setCamera} />
 
       {loading && <CircularProgress />}

@@ -1,10 +1,14 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("/src/assets/fonts/Afacad_Flux/AfacadFlux-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background-color: #242424;
   --text-color: #ffffff;
-}
-
-html {
-  overflow-y: scroll;
 }
 
 html,
@@ -12,17 +16,12 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-.layout-container {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  z-index: 1000;
+  font-family: "MyFont", sans-serif !important;
+  overflow-x: hidden;
 }
 
 .light-theme {
-  --background-color: #f6cfff94;
+  --background-color: #fcefffd0;
   --text-color: #362643;
 }
 .dark-theme {

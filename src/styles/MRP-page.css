@@ -2,6 +2,35 @@
   padding: 20px;
 }
 
+@keyframes space-drive {
+  0% {
+    transform: translateX(-20vw) translateY(0) rotate(30deg);
+  }
+  25% {
+    transform: translateX(20vw) translateY(-20px) rotate(65deg);
+  }
+  50% {
+    transform: translateX(55vw) translateY(0) rotate(30deg);
+  }
+  75% {
+    transform: translateX(95vw) translateY(20px) rotate(55deg);
+  }
+  100% {
+    transform: translateX(130vw) translateY(0) rotate(30deg);
+  }
+}
+
+.rocket-image {
+  width: 300px;
+  position: absolute;
+  top: 150px;
+  left: -300px;
+  z-index: -1;
+  animation: space-drive 12s linear infinite;
+  animation-delay: 1s;
+  overflow: hidden;
+}
+
 h1 {
   margin-top: 0;
   font-size: 2rem;
