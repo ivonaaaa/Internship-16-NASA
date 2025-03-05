@@ -9,7 +9,6 @@ const MRPPage: React.FC = () => {
   const [rover, setRover] = useState("curiosity");
   const [camera, setCamera] = useState("");
   const [page, setPage] = useState(1);
-
   const { photos, loading, error } = useMarsPhotos({ rover, camera, page });
 
   return (

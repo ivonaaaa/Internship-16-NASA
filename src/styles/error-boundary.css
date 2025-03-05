@@ -1,0 +1,12 @@
+body {
+  background-color: #242424;
+}
+
+.error-image {
+  width: 300px;
+  height: auto;
+}
+
+.error-title {
+  font-size: 2em;
+}
