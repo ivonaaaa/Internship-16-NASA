@@ -8,6 +8,6 @@ export const routes: Routes = {
   MRP: "/mars-rover-photos",
   NEO: "near-earth-objects",
   EI: "/earth-imagery",
-  DETAILS: "/details/:id", //valjda ce po ID-ju bit
+  DETAILS: "/details/:type/:id",
   NOT_FOUND: "*",
 };
