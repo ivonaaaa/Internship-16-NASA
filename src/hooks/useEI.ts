@@ -3,7 +3,6 @@ import axios from "axios";
 import { EarthImage, UseEarthImageParams } from "../types/EIData";
 
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
-const BASE_URL = "https://api.nasa.gov/planetary/earth/assets";
 
 const useEarthImage = ({ latitude, longitude }: UseEarthImageParams) => {
   const [image, setImage] = useState<EarthImage | null>(null);
@@ -20,7 +19,7 @@ const useEarthImage = ({ latitude, longitude }: UseEarthImageParams) => {
       const fetchImage = async () => {
         setLoading(true);
         try {
-          const url = `${BASE_URL}?lon=${longitude}&lat=${latitude}&dim=0.5&api_key=${API_KEY}`;
+          const url = `https://api.nasa.gov/planetary/earth/assets?lon=${longitude}&lat=${latitude}&dim=0.5&date=2022-01-01&api_key=${API_KEY}`;
           const response = await axios.get(url);
           const { url: imageUrl, date } = response.data;
           setImage({

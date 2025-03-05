@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useAPOD from "../hooks/useAPOD";
 import APODCard from "../components/AstronomyPictureOfTheDayPage/APODCard";
 import { CircularProgress, Button } from "@mui/material";
-import { getLast20Days } from "../utils/getLast20Days";
+import { getLast20Days } from "../utils/GetLast20Days";
 import "../styles/APOD-page.css";
 
 const APOD: React.FC = () => {

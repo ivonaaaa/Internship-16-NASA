@@ -1,11 +1,13 @@
 import React from "react";
-import { ImageCardProps } from "../../types/ImageCardProps";
+import { ImageCardPropsWithClick } from "../../types/ImageCardProps";
+import "../../styles/withImageZoom.css";
 
-const ImageCard: React.FC<ImageCardProps> = ({
+const ImageCard: React.FC<ImageCardPropsWithClick> = ({
   imageUrl,
   date,
   latitude,
   longitude,
+  onImageClick,
 }) => {
   return (
     <div className="image-card">
@@ -13,6 +15,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
         src={imageUrl}
         alt={`Earth imagery from ${date}`}
         className="earth-image"
+        onClick={() => onImageClick(imageUrl)}
       />
       <div className="image-details">
         <p>Date: {new Date(date).toLocaleDateString()}</p>
