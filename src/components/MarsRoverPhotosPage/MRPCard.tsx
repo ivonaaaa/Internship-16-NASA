@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { MarsPhoto } from "../../types/MRPData";
+import { PhotoCardProps } from "../../types/MRPData";
 import "../../styles/pages-styles/MRP-page.css";
-
-interface PhotoCardProps {
-  photo: MarsPhoto;
-}
 
 const PhotoCard: React.FC<PhotoCardProps> = ({ photo }) => {
   return (

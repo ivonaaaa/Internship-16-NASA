@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "@mui/material";
-import { Switch } from "@mui/material";
+import { Button, Switch, FormControlLabel } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "../contexts/theme-provider/ThemeContext";
 import "../styles/other/navigation.css";
@@ -39,22 +38,26 @@ const Navigation = () => {
           </li>
         ))}
         <li>
-          <label htmlFor="theme-switch">
-            <Switch
-              id="theme-switch"
-              checked={!isDarkMode}
-              onChange={toggleTheme}
-              color="primary"
-              sx={{
-                "& .MuiSwitch-switchBase.Mui-checked": {
-                  color: "#1976d2",
-                },
-                "& .MuiSwitch-track": {
-                  backgroundColor: isDarkMode ? "#1976d2" : "#6345l6",
-                },
-              }}
-            />
-          </label>
+          <FormControlLabel
+            label="Theme"
+            htmlFor="theme-switch"
+            control={
+              <Switch
+                id="theme-switch"
+                checked={!isDarkMode}
+                onChange={toggleTheme}
+                color="primary"
+                sx={{
+                  "& .MuiSwitch-switchBase.Mui-checked": {
+                    color: "#1976d2",
+                  },
+                  "& .MuiSwitch-track": {
+                    backgroundColor: isDarkMode ? "#1976d2" : "#6345l6",
+                  },
+                }}
+              />
+            }
+          />
         </li>
       </ul>
     </nav>

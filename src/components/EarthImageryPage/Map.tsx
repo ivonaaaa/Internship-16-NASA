@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MapComponentProps } from "../../types/EIData";
 import {
   MapContainer,
   TileLayer,
@@ -7,10 +8,6 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import L from "leaflet";
-
-interface MapComponentProps {
-  onLocationSelect: (lat: number, lng: number) => void;
-}
 
 const MapComponent: React.FC<MapComponentProps> = ({ onLocationSelect }) => {
   const [markerPosition, setMarkerPosition] = useState<[number, number] | null>(

@@ -4,3 +4,7 @@ export type APODData = {
   explanation: string;
   url: string;
 };
+
+export type APODCardProps = {
+  data: APODData;
+};

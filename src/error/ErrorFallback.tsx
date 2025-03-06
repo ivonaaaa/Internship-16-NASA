@@ -1,11 +1,7 @@
 import { FC } from "react";
 import { Button } from "@mui/material";
+import { ErrorFallbackProps } from "../types/ErrorTypes";
 import "../styles/other/error.css";
-
-interface ErrorFallbackProps {
-  error: Error;
-  resetErrorBoundary: () => void;
-}
 
 export const ErrorFallback: FC<ErrorFallbackProps> = ({
   error,
@@ -13,7 +9,11 @@ export const ErrorFallback: FC<ErrorFallbackProps> = ({
 }) => {
   return (
     <div>
-      <img src="src/assets/images/alien.png" className="error-image"></img>
+      <img
+        src="src/assets/images/alien.webp"
+        alt="animated alien"
+        className="error-image"
+      ></img>
       <h2 className="error-title">Uh oh, something went wrong :/</h2>
       <p className="error-message">Error: {error.message}</p>
       <Button

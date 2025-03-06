@@ -8,10 +8,26 @@ const HomePage: React.FC = () => {
   return (
     <div className="home-page">
       <Headline />
-      <img src="src/assets/images/space-bg.jpg" className="bg-image"></img>
-      <img src="src/assets/images/planet-1.png" className="planet-1"></img>
-      <img src="src/assets/images/planet-2.png" className="planet-2"></img>
-      <img src="src/assets/images/astronaut.png" className="astronaut"></img>
+      <img
+        src="src/assets/images/space-bg.webp"
+        alt="animated space"
+        className="bg-image"
+      ></img>
+      <img
+        src="src/assets/images/planet-1.webp"
+        alt="animated planets"
+        className="planet-1"
+      ></img>
+      <img
+        src="src/assets/images/planet-2.webp"
+        alt="animated planet"
+        className="planet-2"
+      ></img>
+      <img
+        src="src/assets/images/astronaut.webp"
+        alt="animated astronaut"
+        className="astronaut"
+      ></img>
 
       <div className="home-content">
         <div className="intro">

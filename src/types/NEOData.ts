@@ -16,3 +16,7 @@ export type NEO = {
 export type NEOData = {
   near_earth_objects: Record<string, NEO[]>;
 };
+
+export interface NEOCardProps {
+  neo: NEO;
+}

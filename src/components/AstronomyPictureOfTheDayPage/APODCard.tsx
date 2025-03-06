@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
 import { forwardRef } from "react";
-import { APODData } from "../../types/APODData";
+import { APODCardProps } from "../../types/APODData";
 import "../../styles/pages-styles/APOD-page.css";
 import "../../styles/pages-styles/details-page.css";
-
-interface APODCardProps {
-  data: APODData;
-}
 
 const APODCard = forwardRef<HTMLDivElement, APODCardProps>(({ data }, ref) => {
   return (

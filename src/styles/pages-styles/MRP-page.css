@@ -2,24 +2,6 @@
   padding: 20px;
 }
 
-@keyframes space-drive {
-  0% {
-    transform: translateX(-20vw) translateY(0px) rotate(30deg);
-  }
-  25% {
-    transform: translateX(20vw) translateY(50px) rotate(65deg);
-  }
-  50% {
-    transform: translateX(55vw) translateY(-20px) rotate(30deg);
-  }
-  75% {
-    transform: translateX(95vw) translateY(50px) rotate(55deg);
-  }
-  100% {
-    transform: translateX(130vw) translateY(-50px) rotate(30deg);
-  }
-}
-
 .rocket-image {
   width: 300px;
   position: absolute;
@@ -69,4 +51,22 @@ h1 {
 .pagination button {
   border-radius: 25px;
   margin: 0 10px;
+}
+
+@keyframes space-drive {
+  0% {
+    transform: translateX(-20vw) translateY(0px) rotate(30deg);
+  }
+  25% {
+    transform: translateX(20vw) translateY(50px) rotate(65deg);
+  }
+  50% {
+    transform: translateX(55vw) translateY(-20px) rotate(30deg);
+  }
+  75% {
+    transform: translateX(95vw) translateY(50px) rotate(55deg);
+  }
+  100% {
+    transform: translateX(130vw) translateY(-50px) rotate(30deg);
+  }
 }

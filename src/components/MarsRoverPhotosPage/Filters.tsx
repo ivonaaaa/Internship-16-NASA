@@ -1,13 +1,9 @@
 import React from "react";
+import { FiltersProps } from "../../types/MRPData";
 import "../../styles/pages-styles/MRP-page.css";
 
 const rovers = ["Curiosity", "Opportunity", "Spirit"];
 const cameras = ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "NAVCAM"];
-
-interface FiltersProps {
-  setRover: (rover: string) => void;
-  setCamera: (camera: string) => void;
-}
 
 const Filters: React.FC<FiltersProps> = ({ setRover, setCamera }) => {
   return (

@@ -13,3 +13,12 @@ export type MarsPhoto = {
     status: string;
   };
 };
+
+export interface FiltersProps {
+  setRover: (rover: string) => void;
+  setCamera: (camera: string) => void;
+}
+
+export interface PhotoCardProps {
+  photo: MarsPhoto;
+}

@@ -1,10 +1,6 @@
 import React, { Component, ErrorInfo } from "react";
 import { ErrorFallback } from "../error/ErrorFallback";
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
+import { ErrorBoundaryState } from "../types/ErrorTypes";
 
 class ErrorBoundary extends Component<
   { children: React.ReactNode },

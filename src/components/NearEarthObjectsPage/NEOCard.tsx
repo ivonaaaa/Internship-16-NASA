@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { NEO } from "../../types/NEOData";
-
-interface NEOCardProps {
-  neo: NEO;
-}
+import { NEOCardProps } from "../../types/NEOData";
 
 const NEOCard: React.FC<NEOCardProps> = ({ neo }) => {
   return (
