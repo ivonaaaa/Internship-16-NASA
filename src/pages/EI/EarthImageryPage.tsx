@@ -12,22 +12,17 @@ const MapPage: React.FC = ({ favorites, onAddToFavorites }: any) => {
     lat: number;
     lng: number;
   } | null>(null);
-
   const { image, loading, error } = useEarthImage({
     latitude: selectedLocation?.lat ?? 0,
     longitude: selectedLocation?.lng ?? 0,
   });
-
   const [zoomedImageUrl, setZoomedImageUrl] = useState<string | null>(null);
-
   const handleLocationSelect = (lat: number, lng: number) => {
     setSelectedLocation({ lat, lng });
   };
-
   const handleImageClick = (imageUrl: string) => {
     setZoomedImageUrl(imageUrl);
   };
-
   const handleCloseZoom = () => {
     setZoomedImageUrl(null);
   };

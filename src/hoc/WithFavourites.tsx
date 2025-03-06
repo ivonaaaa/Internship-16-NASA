@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  saveFavoriteLocation,
-  getFavoriteLocations,
-} from "../utils/localStorage";
+import { saveFavoriteLocation, getFavoriteLocations } from "../utils/EIHelpers";
 
 const withFavorites = (WrappedComponent: React.ComponentType<any>) => {
   return (props: any) => {

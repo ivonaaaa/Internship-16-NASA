@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useAPOD from "../../hooks/useAPOD";
 import APODCard from "../../components/AstronomyPictureOfTheDayPage/APODCard";
 import { CircularProgress, Button } from "@mui/material";
-import { getLast20Days } from "../../utils/GetLast20Days";
+import { getLast20Days, handleFilter, loadMore } from "../../utils/APODHelpers";
 import "../../styles/pages-styles/APOD-page.css";
 
 const APOD: React.FC = () => {
@@ -14,29 +14,8 @@ const APOD: React.FC = () => {
     data: filteredImages,
     loading,
     fetchNewData,
+    error,
   } = useAPOD(startDate, endDate);
-
-  const handleFilter = () => {
-    if (!startDate || !endDate) return;
-    fetchNewData(startDate, endDate);
-  };
-
-  const loadMore = () => {
-    if (loading) return;
-
-    const newEndDate = new Date(startDate);
-    newEndDate.setDate(newEndDate.getDate() - 1);
-
-    const newStartDate = new Date(newEndDate);
-    newStartDate.setDate(newStartDate.getDate() - 9);
-
-    setStartDate(newStartDate.toISOString().split("T")[0]);
-    fetchNewData(
-      newStartDate.toISOString().split("T")[0],
-      newEndDate.toISOString().split("T")[0],
-      true
-    );
-  };
 
   return (
     <div className="apod-container">
@@ -57,7 +36,7 @@ const APOD: React.FC = () => {
         />
         <Button
           variant="contained"
-          onClick={handleFilter}
+          onClick={() => handleFilter(startDate, endDate, fetchNewData)}
           disabled={loading}
           sx={{
             borderRadius: "25px",
@@ -66,6 +45,8 @@ const APOD: React.FC = () => {
           Filter
         </Button>
       </div>
+
+      {error && <p className="error-message">Error: {error}</p>}
 
       <div className="gallery">
         {loading ? (
@@ -86,7 +67,9 @@ const APOD: React.FC = () => {
             borderRadius: "20px",
             marginBottom: "50px",
           }}
-          onClick={loadMore}
+          onClick={() =>
+            loadMore(startDate, setStartDate, fetchNewData, loading)
+          }
         >
           Load More
         </Button>

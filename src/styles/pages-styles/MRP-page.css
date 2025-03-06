@@ -4,19 +4,19 @@
 
 @keyframes space-drive {
   0% {
-    transform: translateX(-20vw) translateY(0) rotate(30deg);
+    transform: translateX(-20vw) translateY(0px) rotate(30deg);
   }
   25% {
-    transform: translateX(20vw) translateY(-20px) rotate(65deg);
+    transform: translateX(20vw) translateY(50px) rotate(65deg);
   }
   50% {
-    transform: translateX(55vw) translateY(0) rotate(30deg);
+    transform: translateX(55vw) translateY(-20px) rotate(30deg);
   }
   75% {
-    transform: translateX(95vw) translateY(20px) rotate(55deg);
+    transform: translateX(95vw) translateY(50px) rotate(55deg);
   }
   100% {
-    transform: translateX(130vw) translateY(0) rotate(30deg);
+    transform: translateX(130vw) translateY(-50px) rotate(30deg);
   }
 }
 

@@ -21,8 +21,8 @@ const MRPPage: React.FC = () => {
       {error && <p>{error}</p>}
 
       <div className="gallery">
-        {photos.map((photo) => (
-          <PhotoCard key={photo.id} photo={photo} />
+        {photos.map((photoData) => (
+          <PhotoCard key={photoData.id} photo={photoData} />
         ))}
       </div>
 
