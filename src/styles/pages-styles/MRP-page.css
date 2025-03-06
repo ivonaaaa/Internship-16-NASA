@@ -27,7 +27,6 @@
   left: -300px;
   z-index: -1;
   animation: space-drive 12s linear infinite;
-  animation-delay: 1s;
   overflow: hidden;
 }
 
@@ -39,7 +38,9 @@ h1 {
 .filter-container select {
   padding: 10px;
   font-size: 1rem;
+  border: none;
   border-radius: 20px;
+  background-color: #e6e6fabe;
 }
 
 .mars-card {

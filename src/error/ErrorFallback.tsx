@@ -15,7 +15,7 @@ export const ErrorFallback: FC<ErrorFallbackProps> = ({
     <div>
       <img src="src/assets/images/alien.png" className="error-image"></img>
       <h2 className="error-title">Uh oh, something went wrong :/</h2>
-      <p>Error: {error.message}</p>
+      <p className="error-message">Error: {error.message}</p>
       <Button
         onClick={resetErrorBoundary}
         variant="contained"

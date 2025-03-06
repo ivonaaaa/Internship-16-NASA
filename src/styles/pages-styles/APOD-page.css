@@ -23,6 +23,9 @@ h1 {
   padding: 10px;
   font-size: 1rem;
   border-radius: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e6e6fabe;
 }
 
 .apod-card {
