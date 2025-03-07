@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# INTERNSHIP
+> 16th ASSIGNMENT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### NASA Explorer Web App
 
-Currently, two official plugins are available:
+![Screenshot of the landing page](src/assets/images/nasa-app-screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a React-based web application made to explore NASA's data collection using [NASA Open APIs](https://api.nasa.gov/). The idea behind this project was to gain more experience with React, focusing on routing, global state management, custom hooks, and higher-order components (HOC). Emphasis was placed on maintaining clean architecture, high-quality code, and a visually appealing design.  The application fetches data about astronomy pictures, Mars rovers, near-Earth objects, and Earth imagery.
 
-## Expanding the ESLint configuration
+### Key Features
+<li>Full routing support, including a custom 404 page</li>
+<li>Smooth navigation</li>
+<li>Dynamic data fetching</li>
+<li>Animations and interactive visuals</li>
+<li>Dark/Light mode toggle</li>
+<li>Custom hooks for API requests</li>
+<li>Custom higher-order components</li>
+<li>Error handling with Error Boundaries</li>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Technologies used
+<li>HTML5, CSS3</li>
+<li>TypeScript, React</li>
+<li>Visual Studio Code</li>
+<li>Axios</li>
+<li>localStorage</li>
+<li>Material-UI (MUI), Google Fonts, Vecteezy (for image sources)</li>
+<li>NASA Open APIs</li>
+<li>Recharts and Leaflet.js (for data visualization)</li>
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation and running
+To get started with this project, you need to have the following installed on your machine:
+1. **A modern web browser**
+2. **Visual Studio Code** (optional, but recommended)
+3. **Node.js**
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Steps to Install the Project:
+1. **Clone and open the Repository**:
+   Open a terminal (or command prompt on your machine) and run the following commands:
+   
+   ```bash
+   git clone https://github.com/ivonaaaa/Internship-16-NASA.git
+   ```
+   ```bash
+   cd Internship-16-NASA
+   ```
+2. **Open the project in VS Code**:
+   In the same terminal type in this command:
+    
+   ```bash
+   Code .
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. **Install the dependencies**:
+   Once you're in the VS Code, open a new terminal and type in this command:
+    
+   ```bash
+   npm install
+   ```
+4. **Set up the environment:**
+   Create a .env file in the root of the project and add your NASA API key:
+   ```bash
+   REACT_APP_NASA_API_KEY=your_api_key_here
+   ```
+   
+6. **Run the application**:
+   Start the app by running the following command:
+    
+   ```bash
+   npm run dev
+   ```
+   Open the provided link in your browser to view the application.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
