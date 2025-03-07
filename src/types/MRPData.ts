@@ -22,3 +22,9 @@ export interface FiltersProps {
 export interface PhotoCardProps {
   photo: MarsPhoto;
 }
+
+export interface UseMarsPhotosParams {
+  rover: string;
+  camera?: string;
+  page: number;
+}

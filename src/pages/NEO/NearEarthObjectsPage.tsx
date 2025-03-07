@@ -1,5 +1,5 @@
 import React from "react";
-import useNEO from "../../hooks/useNEO";
+import useNEO from "../../hooks/NEO/useNEO";
 import NEOCard from "../../components/NearEarthObjectsPage/NEOCard";
 import { CircularProgress } from "@mui/material";
 import {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useMarsPhotos from "../../hooks/useMRP";
+import useMarsPhotos from "../../hooks/MRP/useMRP";
 import PhotoCard from "../../components/MarsRoverPhotosPage/MRPCard";
 import Filters from "../../components/MarsRoverPhotosPage/Filters";
 import { Button, CircularProgress } from "@mui/material";

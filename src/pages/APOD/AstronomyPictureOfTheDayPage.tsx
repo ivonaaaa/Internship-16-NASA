@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useAPOD from "../../hooks/useAPOD";
+import useAPOD from "../../hooks/APOD/useAPOD";
 import APODCard from "../../components/AstronomyPictureOfTheDayPage/APODCard";
 import { CircularProgress, Button } from "@mui/material";
 import { getLast20Days, handleFilter, loadMore } from "../../utils/APODHelpers";

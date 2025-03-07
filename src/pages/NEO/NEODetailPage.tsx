@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import useNEO from "../../hooks/useNEO";
+import useNEO from "../../hooks/NEO/useNEO";
 import { NEO } from "../../types/NEOData";
+import { CircularProgress } from "@mui/material";
 
 const NEODetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -16,7 +17,7 @@ const NEODetail = () => {
     }
   }, [neoData, id]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <CircularProgress size={50} />;
   if (error) return <div>{error}</div>;
   if (!neo) return <div>No NEO data found.</div>;
 

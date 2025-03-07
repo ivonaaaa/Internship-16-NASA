@@ -24,16 +24,17 @@ export const handleFilter = (
   const today = new Date();
 
   switch (true) {
-    case start > today || end > today:
-      alert("Selected dates cannot be in the future!");
-      return;
     case start > end:
       alert("Start date cannot be after the end date!");
       return;
-    case end.getFullYear() < 1995:
+    case start.getFullYear() < 1995 || end.getFullYear() < 1995:
       alert(
         "NASA's APOD started in 1995. Please select a date after this one!"
       );
+      return;
+    case start.getFullYear() > today.getFullYear() ||
+      end.getFullYear() > today.getFullYear():
+      alert("Please select a year that is not in the future!");
       return;
     default:
       fetchNewData(startDate, endDate);

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import useAPOD from "../../hooks/useAPOD";
+import useAPOD from "../../hooks/APOD/useAPOD";
+import { CircularProgress } from "@mui/material";
 
 const APODDetail = () => {
   const { date } = useParams<{ date: string }>();
@@ -17,12 +18,9 @@ const APODDetail = () => {
     }
   }, [date, fetchNewData, isDataFetched]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <CircularProgress size={50} />;
   if (error) return <div>{error}</div>;
-
-  if (data.length === 0) {
-    return <div>No data found for the selected date.</div>;
-  }
+  if (data.length === 0) return <div>No data found for the selected date.</div>;
 
   const apod = data[0];
 
